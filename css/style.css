@@ -72,7 +72,7 @@ header {
 }
 
 .logo::before {
-  content: "MM;
+  content: "dd;
   width: 36px;
   height: 36px;
   display: grid;
