@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Profile — Mini Mechanism</title><link rel="stylesheet" href="css/style.css"></head>
+<body><header><nav class="nav container"><a class="logo" href="index.html">Mini Mechanism</a>
+<div class="nav-links"><a href="models.html">3D Models</a><a href="printers.html">Printers</a><a href="upload.html">Upload</a><a data-nav-auth href="auth.html?mode=login">Sign in</a></div></nav></header>
+<main><div class="container"><section class="hero-card"><p class="eyebrow">Your profile</p><h1>Set up Mini Mechanism</h1>
+<form id="profile-form"><div class="form-grid"><label>Display name<input id="display-name" required maxlength="80"></label>
+<label>Account type<select id="role"><option value="customer">Customer</option><option value="printer_owner">Printer owner</option></select></label></div>
+<div id="owner-fields" hidden><hr><h2>Printer information</h2><div class="form-grid">
+<label>Profile/printer name<input id="printer-name"></label><label>Printer type<select id="printer-type"><option>FDM</option><option>Resin</option><option>FDM + Resin</option></select></label>
+<label>Printer brand/model<input id="brand-model"></label><label>Price per gram (£)<input id="price-per-gram" type="number" min="0" step="0.01"></label>
+<label>Maximum width (mm)<input id="max-width" type="number" min="1"></label><label>Maximum depth (mm)<input id="max-depth" type="number" min="1"></label>
+<label>Maximum height (mm)<input id="max-height" type="number" min="1"></label><label>Minimum layer height (mm)<input id="min-layer" type="number" min=".001" step=".001"></label>
+<label>Maximum layer height (mm)<input id="max-layer" type="number" min=".001" step=".001"></label><label>Dispatch/shipping time<input id="dispatch-time" placeholder="e.g. 2–4 business days"></label></div>
+<h3>Materials</h3><div class="check-grid"><label><input type="checkbox" data-material="PLA"> PLA</label><label><input type="checkbox" data-material="PETG"> PETG</label><label><input type="checkbox" data-material="ABS"> ABS</label><label><input type="checkbox" data-material="ASA"> ASA</label><label><input type="checkbox" data-material="TPU"> TPU</label><label><input type="checkbox" data-material="Resin"> Resin</label></div>
+<h3>Nozzle sizes</h3><div class="check-grid"><label><input type="checkbox" data-nozzle="0.2"> 0.2 mm</label><label><input type="checkbox" data-nozzle="0.4"> 0.4 mm</label><label><input type="checkbox" data-nozzle="0.6"> 0.6 mm</label><label><input type="checkbox" data-nozzle="0.8"> 0.8 mm</label></div>
+<h3>Capabilities</h3><div class="check-grid"><label><input id="multi-colour" type="checkbox"> Multi-colour</label><label><input id="sanding" type="checkbox"> Sanding</label><label><input id="painting" type="checkbox"> Painting</label><label><input id="assembly" type="checkbox"> Assembly</label><label><input id="flexible" type="checkbox"> Flexible materials</label></div></div>
+<button class="button" type="submit">Save profile</button><p id="profile-message" class="message" aria-live="polite"></p></form></section></div></main><footer><div class="container">Mini Mechanism · Stage 2</div></footer>
+<script type="module" src="js/main.js"></script><script type="module" src="js/profile.js"></script></body></html>

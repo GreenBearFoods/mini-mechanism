@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Upload a model — Mini Mechanism</title><link rel="stylesheet" href="css/style.css"></head>
+<body><header><nav class="nav container"><a class="logo" href="index.html">Mini Mechanism</a>
+<div class="nav-links"><a href="models.html">3D Models</a><a href="printers.html">Printers</a><a href="upload.html">Upload</a><a data-nav-auth href="auth.html?mode=login">Sign in</a></div></nav></header>
+<main><div class="container"><section class="hero-card narrow"><p class="eyebrow">3D model upload</p><h1>Upload a model</h1><p class="lead">STL and 3MF are accepted. Secure binary storage and geometry analysis will be enabled in the next backend step.</p>
+<form id="upload-form"><label>Model name<input id="model-name" required maxlength="120"></label><label>Category<select id="category" required><option value="">Choose</option><option>Home</option><option>Workshop</option><option>Desk</option><option>Storage</option><option>Repair</option><option>Tools</option><option>Accessibility</option><option>Other</option></select></label>
+<label>Preferred filament/material<select id="material"><option>PLA</option><option>PETG</option><option>ABS</option><option>ASA</option><option>TPU</option><option>Resin</option></select></label>
+<label>STL or 3MF file<input id="model-file" type="file" accept=".stl,.3mf" required></label><p id="file-info" class="muted"></p>
+<label class="checkbox-row"><input id="public-use" type="checkbox"> I give Mini Mechanism permission to make this model searchable and allow others to request it to be printed.</label>
+<label class="checkbox-row"><input id="rights-confirmed" type="checkbox" required> I confirm that I own the rights to this model or have permission to grant these rights.</label>
+<button class="button">Save model</button><p id="upload-message" class="message" aria-live="polite"></p></form></section></div></main><footer><div class="container">Mini Mechanism · Stage 2</div></footer>
+<script type="module" src="js/main.js"></script><script type="module" src="js/upload.js"></script></body></html>
